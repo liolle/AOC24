@@ -12,7 +12,7 @@ Extract input form file
 ```
 
 #### Part1
-1. Use to create the list of cell visited by the guard
+1. Use BFS to create the list of cell visited by the guard
 
 #### Part2
 1. Collect the list of cell visited by the guard 
