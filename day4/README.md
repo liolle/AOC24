@@ -13,7 +13,7 @@ Extract input form file
 
 #### Part1
 1. Create a 2D array out of the puzzle input 
-2. For each cell make BFS of DFS only allowing neighbors that follow the same direction
+2. For each cell make DFS of DFS only allowing neighbors that follow the same direction
 
 #### Part2
 1. Create a 2D array out of the puzzle input 

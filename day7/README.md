@@ -12,6 +12,6 @@ Extract input form file
 ```
 
 #### Part1 && Part 2
-1. For each line brute force by using a BFS over all possible operation combination 
+1. For each line brute force by using a DFS over all possible operation combination 
 2. For each line sum the number of valid combination (where computation amount to Target)
 3. Sum the Target of lines that have at leas 1 valid combination

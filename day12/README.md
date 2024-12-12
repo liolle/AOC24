@@ -13,7 +13,7 @@ Extract input form file
 
 #### Part1
 1. Extract Garden map from input 
-2. Use BFS to Find the different sections 
+2. Use DFS to Find the different sections 
 3. For each section 
     - For each cell in the section 
         - check if the cell is a border
@@ -21,7 +21,7 @@ Extract input form file
 
 #### Part2
 1. Extract Garden map from input 
-2. Use BFS to Find the different sections 
+2. Use DFS to Find the different sections 
 3. For each section 
     - For each cell in the section 
         - Count the number of corners

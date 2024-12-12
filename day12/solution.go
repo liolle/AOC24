@@ -76,7 +76,7 @@ func (g *Garden) Split (){
       cell :=Cell{r,c} 
       if !Includes(visited,cell){
         group := []Cell{}
-        g.BFS(cell,&visited,&group)
+        g.DFS(cell,&visited,&group)
         g.Sections = append(g.Sections,group)
       }
     }
@@ -87,7 +87,7 @@ func (g *Garden) InBound(cell Cell)bool  {
   return cell.Row >= 0 && cell.Col >=0 && cell.Row < g.Rows && cell.Col < g.Cols 
 }
 
-func (g *Garden) BFS (current Cell,visited *[]Cell,group *[]Cell){
+func (g *Garden) DFS (current Cell,visited *[]Cell,group *[]Cell){
   if Includes(*visited,current){return}
 
   *visited = append(*visited,current)
@@ -96,7 +96,7 @@ func (g *Garden) BFS (current Cell,visited *[]Cell,group *[]Cell){
   for _,cell := range(DIRECTION){
     n_cell := Cell{cell.Row+current.Row,cell.Col+current.Col} 
     if g.InBound(n_cell) && g.Map[n_cell.Row][n_cell.Col] == g.Map[current.Row][current.Col] {
-      g.BFS(n_cell,visited,group)
+      g.DFS(n_cell,visited,group)
     }
   }
 }

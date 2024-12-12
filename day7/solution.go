@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func BFS(b *bridge.Bridge,idx int,sum int,operators string,third_op bool)  {
+func DFS(b *bridge.Bridge,idx int,sum int,operators string,third_op bool)  {
 
 
   last := string(operators[len(operators)-1])
@@ -37,9 +37,9 @@ func BFS(b *bridge.Bridge,idx int,sum int,operators string,third_op bool)  {
 
   if idx < len(b.Values)-1{
 
-    BFS(b,idx+1,sum,operators + "*",third_op)
-    BFS(b,idx+1,sum,operators + "+",third_op)
-    BFS(b,idx+1,sum,operators + "|",third_op)
+    DFS(b,idx+1,sum,operators + "*",third_op)
+    DFS(b,idx+1,sum,operators + "+",third_op)
+    DFS(b,idx+1,sum,operators + "|",third_op)
 
   }
 
@@ -85,8 +85,8 @@ func part1(bridges []bridge.Bridge) int{
   sum := 0
 
   for _,b := range(bridges){
-    BFS(&b,0,1,"*",false)
-    BFS(&b,0,0,"+",false)
+    DFS(&b,0,1,"*",false)
+    DFS(&b,0,0,"+",false)
     fmt.Println(b.Solutions)
     if len(b.Solutions)>0{sum+=b.Target}
   }
@@ -98,9 +98,9 @@ func part2(bridges []bridge.Bridge) int{
   sum := 0
 
   for _,b := range(bridges){
-    BFS(&b,0,1,"*",true)
-    BFS(&b,0,0,"+",true)
-    BFS(&b,0,0,"|",true)
+    DFS(&b,0,1,"*",true)
+    DFS(&b,0,0,"+",true)
+    DFS(&b,0,0,"|",true)
 
     fmt.Println(b.Solutions)
     if len(b.Solutions)>0{sum+=b.Target}
