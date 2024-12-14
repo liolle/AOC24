@@ -27,4 +27,4 @@ Extract input form file
 3. Convert the robot placement into an image 
     - Look for an image of a tree 
 5. Repeat 3 & 4 until the tree is found.
-6. Once found retrieve amount of second past to get there.
+6. Once found, retrieve the amount of second to get there.
