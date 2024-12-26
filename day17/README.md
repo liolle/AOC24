@@ -18,7 +18,7 @@
 3. Step-by-Step Approach:
     - Start with `A = 8**15`.
     - Modify the 10 leftmost bits of A by incrementing:
-        - `A += 1 << (38 - 3 * idx)` until the 3 rightmost bits of A match the value corresponding to the current index idx being sought in the answer.
+        - `A += 1 << (38 - 3 * idx)` until the 3 rightmost bits of `A` match the value corresponding to the current index `idx` being sought in the answer.
     - Once the match is found, shift A 3 bits to the right `(A >>= 3)` and proceed to the next index 
 
 
