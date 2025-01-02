@@ -34,7 +34,7 @@ We can derive a series of rule.
   - OR:
       - `OR` gate can only be input of `AND/XOR` gate 
       - `OR` gate can only take `AND` gate as input
-  - `(Xn ⊕ Yn) ⊕ (x ⊕ x)` should always output a `Zxx` except for the last carry `z45` 
+  - `(Xn ⊕ Yn) ⊕ (a + b)` should always output a `Zxx` except for the last carry `z45` 
   - A gate with `Zxx` as its output cannot directly use `Xn or Yn` as inputs.
 
 1. Look for gates that does not follow those rules.
