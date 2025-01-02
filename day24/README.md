@@ -15,7 +15,9 @@
 Here we need to make sure that the given input correctly implement the [Full adder](https://en.wikipedia.org/wiki/Adder_(electronics)) between two 45 bit number.
 
 By using the following formula 
+
 ![Full-Adder](full-adder.png)
+
 
 Zn = (Xn ⊕ Yn) ⊕ Cn-1
 Cn = (Xn * Yn) + (Cn-1 * (Xn ⊕ Yn))
