@@ -1,9 +1,9 @@
 ## Day 24: Crossed Wires
 
 #### Part1
-1. Add all the inputs on the board as independent active gate.
-1. Recursively build the board by placing gates that depend only on inputs already present on the board.
-2. Mark all gates as inactive 
+1. Add all the inputs signals on the board as independent active gate.
+1. Build the board recursively by placing gates that depend only on inputs already present on the board.
+2. Mark all gates as inactive initially
 3. For each gate
     - Ensure that both inputs are active (i.e., their outputs have already been computed).
     - Compute the output of the current gate.
@@ -26,15 +26,15 @@ with C0 = (Xn * Yn)
 
 We can derive a series of rule.
   - AND:
-      - AND gate can only be input of OR gate 
-      - AND gate can't have an other AND gate as input
+      - `AND` gate can only be input to and `OR` gate 
+      - `AND` gate cannot take other `AND` gate as input
   - XOR:
-      - XOR gate can only be input of AND/XOR gate
-      - XOR gate can't have AND gate as input
+      - `XOR` gate can only be input to and `AND/XOR` gate
+      - `XOR` gate cannot take `AND` gate as input
   - OR:
-      - OR gate can only be input of AND/XOR gate 
-      - OR gate can only have AND gate as input
-  - (Xn ⊕ Yn) ⊕ (x ⊕ x) should always output a Zxx except for the last carry z45 
-  - A gate with a Zxx as output can't directly call Xn/Yn
+      - `OR` gate can only be input of `AND/XOR` gate 
+      - `OR` gate can only take `AND` gate as input
+  - `(Xn ⊕ Yn) ⊕ (x ⊕ x)` should always output a `Zxx` except for the last carry `z45` 
+  - A gate with `Zxx` as its output cannot directly use `Xn or Yn` as inputs.
 
-1. Filter the gates that does not follow those rules.
+1. Look for gates that does not follow those rules.
