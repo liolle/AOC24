@@ -1,15 +1,5 @@
 ## Day 3: Mull It Over
 
-#### Setup 
-Extract input form file 
-```go
-filePath := "input.txt"
-buffer, err := os.ReadFile(filePath)
-if err != nil {
-  fmt.Println("Error opening file:", err)
-  return
-}```
-
 #### Part1
 1. Use regular expression to extract all valid multiplication group
 2. Compute each multiplication
